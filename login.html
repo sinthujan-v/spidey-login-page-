@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="login.css" type="text/css" media="all" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </head>
+ <body>
+  <div class="for_login_body">
+    <form action="" method="get" accept-charset="utf-8">
+     <div class="container">
+       <h2 class="head_for_login">Log In</h2>
+       <div class="for_email">
+         <input type="email" name="" id="email" value="" required placeholder="" />
+         <label for="email">Email</label>
+         <ion-icon name="mail-outline" class="mail_icon"></ion-icon>
+       </div>
+       <div class="for_password">
+         <input type="password" name="" id="password" value="" required placeholder="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+         <label for="password">Password</label>
+         <ion-icon name="lock-open-outline" class="lock_icon"></ion-icon>
+       </div>
+       <div class="for_forget">
+         <div class="check_box_container">
+          <input type="checkbox" name="" id="checkbox" value="" />
+          <span class="tick_mark"></span>
+        </div>
+        <p>Remember Me</p>
+        <a class="forgetpassword" href="#">Forget Password</a>
+       </div>
+       <div class="for_login_button">
+         <button class="login_button" type="submit">Log In</button>
+       </div>
+       <div class="dont_have_account">
+         <p>Don't Have An Account</p>
+         <a href="#">Register</a>
+       </div>
+     </div>
+   </form>
+  </div>
+ </body>
+</html>

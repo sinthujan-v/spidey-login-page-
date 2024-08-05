@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Gideon+Roman&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalnia+Glaze:wght@100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.for_login_body{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url(bgimg/spired.jpg);
+  background-position: center;
+  background-size: cover;
+  font-family: "Ubuntu", sans-serif;
+  color: #ffff;
+  user-select: none;
+}
+
+.container{
+  border: 1.3px solid #00ffff;
+  max-height: 100vh;
+  max-width: 100vw;
+  border-radius: 4px;
+  backdrop-filter: blur(0.2rem);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.head_for_login{
+  text-align-last: center;
+  margin: 2rem 0;
+}
+
+.for_email, .for_password{
+  margin: auto;
+  margin-bottom: 1.5rem;
+  height: 30px;
+  position: relative;
+  width: 80%;
+}
+
+#password, #email{
+  outline: none;
+  font-size: inherit;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ffff;
+  color: #ffff;
+}
+
+ion-icon{
+  position: absolute;
+  right: -1rem;
+  top: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+ion-icon:hover{
+  color: #00ffff;
+}
+
+label{
+  position: absolute;
+  font-size: 0.8rem;
+  left: 0;
+  top: 0.7rem;
+  opacity: 0.8;
+  transition: 0.4s;
+}
+
+
+:is(#email,#password):focus + label{
+  top: -1rem;
+  opacity: 1;
+}
+
+:is(#email,#password):not(:focus):valid + label{
+  top: -1rem;
+  opacity: 1;
+}
+
+:is(#email,#password):focus:invalid{
+  border-bottom: 1px solid #ff4757;
+  transition-duration: 0.5s;
+}
+
+:is(#email,#password):focus:valid{
+  border-bottom: 1px solid #7bed9f;
+  transition-duration: 0.5s;
+}
+
+:is(#email,#password):not(:placeholder-shown) + label{
+  top: -1rem;
+  opacity: 1;
+}
+
+/* for_forget */
+
+.for_forget{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem 1.5rem;
+}
+
+.for_forget a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.for_forget a::after{
+  content: '';
+  display: block;
+  width: 0;
+  margin: auto;
+  height: 1.3px;
+  background-color: #00ffff;
+  transition-duration: 0.4s;
+  border-radius: 10px;
+}
+
+.for_forget a:hover::after{
+  width: 100%;
+}
+
+.for_forget p::after{
+  content: '|';
+  margin-left: 3px;
+}
+
+.check_box_container{
+  height: 15px;
+  width: 15px;
+  position: relative;
+}
+
+#checkbox{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+}
+
+div span{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1.2px solid white;
+  border-radius: 2px;
+  cursor: pointer;
+  transition-duration: 0.1s;
+}
+
+span::after{
+  content: '';
+  position: absolute;
+  height: 15px;
+  width: 6px;
+  border: solid #0e8;
+  border-width: 0 1.5px 1.5px 0;
+  left: 2.5px;
+  top: -4px;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  opacity: 0;
+  transition-duration: 0.1s;
+}
+
+#checkbox:checked + span::after{
+  opacity: 1;
+}
+
+/* for_login_button */
+
+.for_login_button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.for_login_button button{
+  width: 85%;
+  height: 2.5rem;
+  background-color: transparent;
+  color: white;
+  font-size: inherit;
+  border-radius: 3rem;
+  margin-bottom: 1rem;
+  border: 1px solid white;
+  transition: all 0.2s;
+}
+
+.for_login_button button:hover{
+  box-shadow: 0 0 3px #00ffff;
+  border: 1px solid #00ffff;
+}
+
+/* dont_have_account */
+
+.dont_have_account{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.dont_have_account p{
+  margin-right: 0.5rem;
+}
+
+.dont_have_account a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.dont_have_account a::after{
+  content: '';
+  display: block;
+  width: 0;
+  margin: auto;
+  height: 1.3px;
+  background-color: #00ffff;
+  transition-duration: 0.4s;
+  border-radius: 10px;
+}
+
+.dont_have_account a:hover::after{
+  width: 100%;
+}
+
+/* media */
+
+
+@media screen and (max-width: 1981px){
+ .container{ 
+   width: 30vw;
+   font-size: 1.3rem;
+  }
+ .for_forget{
+   justify-content: center;
+   gap: 10px;
+  }
+}
+
+@media screen and (max-width: 1681px){
+ .container{ 
+   width: 40vw;
+   font-size: 1.3rem;
+ }
+ .for_forget{
+    justify-content: center;
+    gap: 10px;
+   }
+   .check_box_container{
+     margin-top: 4px;
+   }
+}
+ 
+@media screen and (max-width: 1024px){
+   .container{ 
+   width: 60vw;
+   font-size: 1.3rem;
+   }
+     #checkbox{
+     font-size: inherit;
+   }
+}
+
+@media screen and (max-width: 601px){
+   .container{ 
+   width: 80vw;
+   font-size: 1.3rem;
+   }
+}
+
+@media screen and (max-width: 481px){
+   .container{ 
+   width: 80vw;
+   font-size: 0.9rem;
+   }
+   #checkbox{
+     font-size: inherit;
+   }
+    .check_box_container{
+     margin-top: 1px;
+   }
+}
+
+@media screen and (max-width: 376px){
+   .container{ 
+   width: 80vw;
+   font-size: 0.7rem;
+   }
+    .check_box_container{
+     margin-top: 1px;
+   }
+}
+
+
+@media only screen and (min-device-width: 480px){
+ .for_login_body{
+  width: 100vw;
+  height: 200vh;
+ }
+ .container{ 
+   width: 50vw;
+   max-height: 110vh;
+   font-size: 1rem;
+   }
+ .check_box_container{
+     margin-top: 1px;
+}
+}
